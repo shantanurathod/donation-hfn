@@ -29,7 +29,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     // supaData().then(error => console.log("update err-->", error))
     supaData().then((data) => data && setData(data[0]));
     // .catch(Error, console.log("Something went wrong!", error))
-  }, []);
+  }, [supaData]);
 
   // console.log(data && data['main-image'])
   window.addEventListener("scroll", () => {
