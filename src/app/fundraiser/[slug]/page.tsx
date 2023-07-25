@@ -93,7 +93,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               <div
                 className={`bg-[url(https://images.unsplash.com/photo-1497704628914-8772bb97f450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDcxMTcwfHxlbnwwfHx8fHw%3D&w=1000&q=80)] bg-center h-1/2 flex justify-center items-center bg-gray-500`}
               >
-                <p className="text-white italic">"Quote"</p>
+                <p className="text-white italic">Quote</p>
               </div>
               <div className="flex flex-col h-1/2 items-center justify-center">
                 <button className="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 my-3 w-2/3 py-4 font-semibold text-white hover:text-gray-700 ease-out duration-300">
