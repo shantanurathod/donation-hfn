@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import Blog from "../../../../components/Blog";
-import DonateWidget from "../../../../components/DonateWidget";
+// import Blog from "../../../../components/Blog";
+// import DonateWidget from "../../../../components/DonateWidget";
 import Image from "next/image";
 
 
@@ -24,6 +24,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     return data;
   }
+  
   useEffect(() => {
     // supaData().then(error => console.log("update err-->", error))
     supaData().then((data) => data && setData(data[0]));
