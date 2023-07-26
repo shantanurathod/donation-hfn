@@ -1,48 +1,14 @@
-
-
-// import { useEffect, useState } from "react";
 import supabase from "@/utils/supabase";
 import Image from "next/image";
 
-// interface ResponseType {
-//   title: string;
-//   description: {tagline : string, content: string};
-//   mainImage: string
-// }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  // const [data, setData] = useState();
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-
-  // async function supaData() {
-   
-
-  //   // console.log("Error==>", error)
-
-  //   return data;
-  // }
-  
-  // useEffect(() => {
-  //   // supaData().then(error => console.log("update err-->", error))
-  //   supaData().then((data) => data && setData(data[0]));
-  //   // .catch(Error, console.log("Something went wrong!", error))
-  // }, [supaData]);
-
 
   const {data} = await supabase
   .from("FundRaiser")
   .select()
   .eq("slug", `${params.slug}`);
-
-  console.log("DATA-->", data)
-  // window.addEventListener("scroll", () => {
-  //   if (window.scrollY > 200) {
-  //     setIsScrolled(true);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // });
+ 
   return (
     data && (
       <div>
@@ -53,8 +19,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <div className="lg:grid lg:grid-cols-3">
             <div className="col-span-2">
               {/* <Blog data={data} /> */}
-              <div className="group hover:before:block before:hidden before:absolute before:-inset-1 before:bg-gray-700 before:opacity-50 relative rounded-lg overflow-hidden hover:transition-all ease-in-out delay-1000 cursor-pointer">
-                <h2 className="hidden hover:transition-all hover:delay-2000 text-center group-hover:block text-white capitalize font-bold text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="group lg:hover:before:block before:hidden before:absolute before:-inset-1 before:bg-gray-700 before:opacity-50 relative rounded-lg overflow-hidden hover:transition-all ease-in-out delay-1000 cursor-pointer">
+                <h2 className="hidden hover:transition-all hover:delay-2000 text-center lg:group-hover:block text-white capitalize font-bold text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   {data[0]["title"]}
                 </h2>
                 <Image
