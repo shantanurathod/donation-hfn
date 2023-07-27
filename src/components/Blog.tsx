@@ -8,9 +8,11 @@ export default function Blog({
   data: {
     title: string;
     mainImage: string;
-    description: { tagline: string; content: string };
+    description: {content: string ,tagline: string; };
   };
 }) {
+
+  console.log("description", data["mainImage"])
   return (
     <>
       <div className="group lg:hover:before:block before:hidden before:absolute before:-inset-1 before:bg-gray-700 before:opacity-50 relative rounded-lg overflow-hidden hover:transition-all ease-in-out delay-1000 cursor-pointer">
