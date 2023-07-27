@@ -13,8 +13,8 @@ export default function Blog({
 }) {
   return (
     <>
-      <div onScroll={(screenY) => console.log("ScreenY", screenY)} className="group hover:before:block before:hidden before:absolute before:-inset-1 before:bg-gray-700 before:opacity-50 relative rounded-lg overflow-hidden hover:transition-all ease-in-out delay-1000 cursor-pointer">
-        <h2 className="hidden hover:transition-all hover:delay-2000 text-center group-hover:block text-white capitalize font-bold text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="group lg:hover:before:block before:hidden before:absolute before:-inset-1 before:bg-gray-700 before:opacity-50 relative rounded-lg overflow-hidden hover:transition-all ease-in-out delay-1000 cursor-pointer">
+        <h2 className="hidden hover:transition-all hover:delay-2000 text-center lg:group-hover:block text-white capitalize font-bold text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {data["title"]}
         </h2>
         <Image

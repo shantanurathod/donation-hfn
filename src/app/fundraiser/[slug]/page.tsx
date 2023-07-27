@@ -1,9 +1,7 @@
 import supabase from "@/utils/supabase";
-import Image from "next/image";
-import Blog from "../../../../components/Blog";
-import Support from "../../../../components/Support";
-import DonateWidget from "../../../../components/DonateWidget";
-import DonateSlideBtn from "../../../../components/DonateSlideBtn";
+import Blog from "@/components/Blog"
+import DonateWidget from "@/components/DonateWidget";
+import DonateSlideBtn from "@/components/DonateSlideBtn";
 
 const getData = async (slug: string) => {
   const {data} = await supabase
@@ -29,7 +27,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <div className="col-span-2">
               <Blog data={Data} />
             </div>
-            <DonateWidget firstBtn="Donate" secBtn="Share" quote="Quote" bgUrl="https://images.unsplash.com/photo-1497704628914-8772bb97f450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDcxMTcwfHxlbnwwfHx8fHw%3D&w=1000&q=80"/>
+            <DonateWidget firstBtn="Donate" secBtn="Share" quote="Quote"/>
           </div>
         </div>
         <DonateSlideBtn/>
