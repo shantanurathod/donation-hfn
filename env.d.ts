@@ -2,5 +2,10 @@ namespace NodeJS {
     interface ProcessEnv {
       NEXT_PUBLIC_SUPABASE_URL: string;
       NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
+      NEXT_PUBLIC_SUPABASE_AUTHORIZATION: string;
+      NEXT_PUBLIC_STRAPI_READ_ONLY_API_TOKEN: string;
+      NEXT_PUBLIC_STRAPI_URL: string;
+      NEXT_PUBLIC_RAZORPAY_API_KEY_ID_TEST:string;
+      NEXT_PUBLIC_RAZORPAY_API_KEY_SECRET_TEST:string;
     }
   }

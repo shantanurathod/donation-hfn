@@ -1,3 +1,7 @@
+'use client'
+
+import { displayRazorpay } from "@/utils/displayRazorpay";
+
 export default function Support() {
   return (
     <div className="p-1 py-8 bg-gray-200 rounded-lg mt-5 mb-16">
@@ -5,7 +9,7 @@ export default function Support() {
         Support the fundraiser
       </h3>
       <div className="flex p-3">
-        <button className="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 my-1 mx-2 w-2/3 py-2 font-semibold text-white hover:text-gray-700 ease-out duration-300">
+        <button onClick={(e) => displayRazorpay()} className="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 my-1 mx-2 w-2/3 py-2 font-semibold text-white hover:text-gray-700 ease-out duration-300">
           Donate
         </button>
         <button className="rounded-full border-2 w-2/3 my-1 mx-2 py-2 border-gray-400 font-semibold text-gray-700 hover:bg-gradient-to-r from-sky-500 to-indigo-500 hover:border-gray-100 hover:text-white ease-out duration-300">
