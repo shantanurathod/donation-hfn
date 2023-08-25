@@ -4,15 +4,18 @@ import { displayRazorpay } from "@/utils/displayRazorpay";
 
 export default function Support() {
   return (
-    <div className="p-1 py-8 bg-gray-200 rounded-lg mt-5 mb-16">
-      <h3 className="w-full lg:text-4xl text-3xl font-bold my-1 text-gray-700 text-center">
+    <div className="hidden lg:block lg:flex justify-between items-center py-8 px-24 bg-[#B2E0FB] mt-5">
+      <div className="">
+      <h3 className="lg:text-3xl uppercase text-3xl font-bold my-1 text-gray-700">
         Support the fundraiser
       </h3>
-      <div className="flex p-3">
-        <button onClick={(e) => displayRazorpay()} className="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 my-1 mx-2 w-2/3 py-2 font-semibold text-white hover:text-gray-700 ease-out duration-300">
+      <p className="text-gray-700 font-medium capitalize">Every small share & donation counts</p>
+      </div>
+      <div className="flex flex-col items-center justify-center w-1/3 ">
+        <button onClick={(e) => displayRazorpay()} className="rounded-full w-2/3 bg-gradient-to-r from-sky-500 to-indigo-500 my-3 py-4 font-semibold text-white hover:text-gray-700 ease-out duration-300">
           Donate
         </button>
-        <button className="rounded-full border-2 w-2/3 my-1 mx-2 py-2 border-gray-400 font-semibold text-gray-700 hover:bg-gradient-to-r from-sky-500 to-indigo-500 hover:border-gray-100 hover:text-white ease-out duration-300">
+        <button className="rounded-full border-2 my-3 w-2/3 py-4 border-gray-400 font-semibold text-gray-700 hover:bg-gradient-to-r from-sky-500 to-indigo-500 hover:border-gray-100 hover:text-white ease-out duration-300">
           Share
         </button>
       </div>

@@ -1,10 +1,11 @@
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import parse from "html-react-parser";
 
 export default function MDParserBlog({ description }: { description: string }) {
   return (
-      <ReactMarkdown
+    <section className="rich-text">
+      <Markdown
         children={description}
         remarkPlugins={[remarkGfm]}
         components={{
@@ -14,12 +15,13 @@ export default function MDParserBlog({ description }: { description: string }) {
             ).replace("Code\n", "");
 
             return htmlString.includes("iframe") ? (
-              <section className="rich-text" children={parse(htmlString)} />
+              <section children={parse(htmlString)} />
             ) : (
               <code>no video resolved</code>
             );
           },
         }}
       />
+    </section>
   );
 }

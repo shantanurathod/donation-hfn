@@ -122,6 +122,9 @@
 .rich-text iframe {
   @apply w-full aspect-[2/1] rounded
 }
+
+
+
 /* :root
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
